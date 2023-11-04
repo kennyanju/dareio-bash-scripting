@@ -1,7 +1,11 @@
 cd documents
+
 mkdir dareio lessons
+
 mkdir shell-scripting
+
 touch user-input.sh
+
 nano user-input.sh
 
 
