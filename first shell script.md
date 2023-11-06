@@ -4,39 +4,23 @@ This is a simple bash script to demonstrate basic concepts.
 
 ## What it does
 
-- Prints "Hello World" 
-- Prints the current date and time
-- Prints the username of the logged in user
-- Prints the home directory path
-- Lists files in the home directory
+- Prompt the user for their name 
+- Display a greeting with the entered name
 
 ## Code Overview
 
 ```bash
-#!/bin/bash
-
-# Print hello world
-echo "Hello World"
-
-# Print date and time 
-date
-
-# Print username
-whoami
-
-# Print home directory 
-echo "Home directory is $HOME"
-
-# List files in home directory
-ls ~
+!/bin/bash
+#Prompt the user for their name
+echo "Enter your name:"
+read name
+# Display a greeting with the entered name
+echo "Hello, $name! Nice to meet you."
 ```
 
 - `#!/bin/bash` shebang specifies to run with bash interpreter
 - `echo` prints the string
-- `date` prints current date and time
-- `whoami` prints current username
-- `$HOME` prints home directory path
-- `ls ~` lists home directory contents
+- `read` reads input from echo
 
 ## How to use
 
@@ -45,6 +29,7 @@ Save the code in a file `first_script.sh` and run:
 ```bash
 bash first_script.sh
 ```
+
 ```bash
 cd documents
 
