@@ -45,18 +45,27 @@ zebra
 ## Code
 
 ```bash
-#!/bin/bash
+#!bin/bash
+# Create three files
+echo "Creating files..."
+echo "This is file3." > file3.txt
+echo "This is filel." > file1.txt
+echo "This is file2." > file2.txt
+echo "Files created."
 
-input_file=$1
+# Display the files in their current order
+echo "Files in their current order:"
+ls
 
-readarray -t array < "$input_file"
+# Sort the files alphabetically
+echo "Sorting files alphabetically..."
+ls | sort > sorted_files.txt
+echo "Files sorted."
 
-sorted_array=($(sort <<<"${array[*]}"))
+# Display the sorted files
+echo "Sorted files:"
+cat sorted_files.txt
 
-for element in "${sorted_array[@]}"
-do
-  echo "$element"
-done
 ```
 
 ```bash
